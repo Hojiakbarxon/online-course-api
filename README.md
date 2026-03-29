@@ -106,11 +106,9 @@ Delete Lesson   →  deletes videos
 - A student can enroll in multiple courses
 - A course can have multiple teachers and multiple students
 - Only a teacher who belongs to a course can create lessons in it
-- Only the teacher who created a lesson can add or edit videos in it
+- Only the teacher who created a lesson can add videos to it
 - Deleting a course removes all its lessons and videos automatically
 - Deleting a teacher removes all their lessons and videos automatically
-
----
 
 ## Project Structure
 ```
@@ -191,6 +189,10 @@ npm run start:prod
 ## Upcoming Features
 
 - JWT Authentication
-- Role-based access control (Teacher / Student)
-- Teacher can only edit their own lessons and videos
-- Student can only access enrolled courses
+- Role-based access control with 4 roles:
+  - SuperAdmin — creates and deletes courses
+  - Admin — assigns teachers to courses
+  - Teacher — manages lessons and videos in assigned courses
+  - Student — enrolls and accesses course content
+- Password hashing
+- Refresh tokens
