@@ -147,7 +147,7 @@ src/
 │   └── video.module.ts
 ├── common/
 │   ├── base.create.dto.ts
-    ├── base.entity.ts
+│   ├── base.entity.ts
 │   └── base.update.ts
 ├── interfaces/
 │   └── success-response.interface.ts
@@ -159,7 +159,7 @@ src/
 ## Installation
 ```bash
 # clone the repo
-git clone https://github.com/yourusername/online_course.git
+git clone https://github.com/Hojiakbarxon/online-course-api.git
 cd online_course
 
 # install dependencies
@@ -170,12 +170,8 @@ npm install
 
 Create a `.env` file in the root directory:
 ```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=yourpassword
-DB_NAME=online_course
-JWT_SECRET=yourjwtsecret
+PORT=your_port
+DB_URL=postgres://your_username:your_password@localhost:5432/online_course
 ```
 
 ## Running the App
@@ -198,20 +194,3 @@ npm run start:prod
 - Role-based access control (Teacher / Student)
 - Teacher can only edit their own lessons and videos
 - Student can only access enrolled courses
-
----
-
-```
-
----
-
-And for the **GitHub repository UI** (Settings → About section on your repo page):
-
-**Description:**
-```
-RESTful API for an online course platform — teachers manage courses, lessons and videos, students enroll and access content. Built with NestJS, TypeORM and PostgreSQL.
-```
-
-**Topics/tags to add:**
-```
-nestjs typescript postgresql typeorm rest-api online-course backend
