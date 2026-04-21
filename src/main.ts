@@ -7,10 +7,10 @@ async function bootstrap() {
   let port = Number(process.env.PORT)
   const app = await NestFactory.create(AppModule);
 
-  // 1. Set global prefix FIRST
+  
   app.setGlobalPrefix("api")
 
-  // 2. Then setup Swagger AFTER
+  
   const config = new DocumentBuilder()
     .setTitle('Online Course API')
     .setDescription('CRUD API for courses, teachers, students')
@@ -18,7 +18,7 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document); // ← change 'api' to 'docs'
+  SwaggerModule.setup('docs', app, document); 
 
   app.useGlobalPipes(
     new ValidationPipe({
